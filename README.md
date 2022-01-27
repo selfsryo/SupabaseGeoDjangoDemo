@@ -34,3 +34,8 @@ docker container exec -it geodjango python3 manage.py shell -c "from world impor
 ## 使用データ
 以下`./geodjango/world/data`に格納（クリックでダウンロードされます）<br>
 https://thematicmapping.org/downloads/TM_WORLD_BORDERS-0.3.zip
+
+
+## Browsable API
+以下にアクセス
+http://localhost:8000/world/
