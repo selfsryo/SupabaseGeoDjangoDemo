@@ -10,18 +10,3 @@ services:
       - 8000:8000
     env_file:
       - ./geodjango/.env
-    depends_on:
-      - postgres
-
-  postgres:
-    container_name: postgres
-    build: ./postgres
-    volumes:
-      - postgis_data:/var/lib/postgresql/data
-      - ./postgres/sql:/docker-entrypoint-initdb.d
-    env_file: ./postgres/.env.db
-    ports:
-      - 5433:5432
-
-volumes:
-  postgis_data:
