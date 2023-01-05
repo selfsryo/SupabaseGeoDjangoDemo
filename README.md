@@ -1,7 +1,8 @@
-# GeoDjango Official Tutorial
+# Supabase GeoDjagno Demo
 
 ## 概要
 - [Django公式のGeoDjangoチュートリアル](https://docs.djangoproject.com/ja/3.2/ref/contrib/gis/tutorial/)を実施<br>
+- [Supabase Database](https://supabase.com/database)の[PostGIS](https://supabase.com/docs/guides/database/extensions/postgis)にDjangoから接続
 
 
 ## Docker version
@@ -10,14 +11,15 @@ docker version --format '{{.Server.Version}}'
 20.10.11
 ```
 
+## 準備
+- [Supabase](https://supabase.com/database)からアカウント登録
+- DBのExtensionにPostGISを追加
+
 ## 環境構築
 ```sh
 cp ./geodjango/.env.sample ./geodjango/.env
-# 任意の情報を入力
+# 任意の情報を追加（DBの環境変数にはSupabase databaseの接続情報を入力）
 vi ./geodjango/.env
-cp ./postgres/.env.db.sample ./postgres/.env.db
-# 任意の情報を入力
-vi ./postgres/.env.db
 docker compose up --build -d
 ```
 
